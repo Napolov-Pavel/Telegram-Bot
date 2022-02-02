@@ -2,7 +2,6 @@ package com.github.javarushcommunity.jrtb.command;
 
 import org.junit.jupiter.api.DisplayName;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static com.github.javarushcommunity.jrtb.command.CommandName.STOP;
 import static com.github.javarushcommunity.jrtb.command.StopCommand.STOP_MESSAGE;
 @DisplayName("Unit-level testing for StopCommand")
@@ -20,6 +19,6 @@ public class StopCommandTest extends AbstractCommandTest{
 
     @Override
     Command getCommand() {
-        return new StopCommand(sendBotMessageService);
+        return new StopCommand(sendBotMessageService, telegramUserService);
     }
 }
